@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
@@ -8,6 +9,8 @@ import { siteConfig } from "@/data/site";
 import { isSiteLaunched } from "@/lib/launch/config";
 import { indexableRobots, noindexRobots } from "@/lib/seo";
 import "./globals.css";
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const inter = Inter({
   variable: "--font-inter",
@@ -90,6 +93,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           {!isComingSoonShell && <Footer />}
         </SearchProvider>
       </body>
+      {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
     </html>
   );
 }
