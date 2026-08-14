@@ -1,7 +1,7 @@
 # LawGPT Technical SEO Report
 
 **Date:** 9 August 2026  
-**Site:** https://lawgpt.ai  
+**Site:** https://lawgptapp.com  
 **Scope:** Production-grade Technical SEO only (no visual redesign)
 
 ---
@@ -101,7 +101,7 @@ Live SEO-friendly paths are unchanged:
 ## Remaining recommendations
 
 1. **Wide OG cards (1200×630)** — current default brand mark is 512×512. Design dedicated landscape OG templates for homepage and campaigns.
-2. **Search Console / Bing Webmaster** — submit `https://lawgpt.ai/sitemap.xml` after deploy.
+2. **Search Console / Bing Webmaster** — submit `https://lawgptapp.com/sitemap.xml` after deploy.
 3. **hreflang** — only if you ship multi-language locales later.
 4. **Guide markdown link audit** — convert remaining plain-text `/platform` mentions inside guide bodies into markdown links where editorial review allows.
 5. **Dedicated `/legal-guides` alias** — optional permanent redirect strategy if marketing prefers that URL wording.

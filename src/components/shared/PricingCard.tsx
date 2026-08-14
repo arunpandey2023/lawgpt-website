@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import type { PricingPlan } from "@/types";
@@ -5,9 +6,11 @@ import type { PricingPlan } from "@/types";
 interface PricingCardProps {
   plan: PricingPlan;
   className?: string;
+  /** Replaces the default CTA button when provided. */
+  actions?: ReactNode;
 }
 
-export function PricingCard({ plan, className }: PricingCardProps) {
+export function PricingCard({ plan, className, actions }: PricingCardProps) {
   return (
     <article
       className={cn(
@@ -84,21 +87,23 @@ export function PricingCard({ plan, className }: PricingCardProps) {
           </li>
         ))}
       </ul>
-      <div className="mt-8">
-        <Button
-          href={plan.ctaHref ?? "#start"}
-          size="lg"
-          className={cn(
-            "w-full",
-            plan.highlighted
-              ? "bg-white text-foreground hover:bg-white/90"
-              : undefined,
-          )}
-          variant={plan.highlighted ? "primary" : "secondary"}
-        >
-          {plan.cta}
-        </Button>
-      </div>
+      {actions ?? (
+        <div className="mt-8">
+          <Button
+            href={plan.ctaHref ?? "/#start"}
+            size="lg"
+            className={cn(
+              "w-full",
+              plan.highlighted
+                ? "bg-white text-foreground hover:bg-white/90"
+                : undefined,
+            )}
+            variant={plan.highlighted ? "primary" : "secondary"}
+          >
+            {plan.cta}
+          </Button>
+        </div>
+      )}
     </article>
   );
 }

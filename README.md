@@ -4,7 +4,7 @@ Official marketing website for **LawGPT** — the AI Operating System for Legal 
 
 The site presents the product platform, live legal workflows, Legal Guides, pricing, company information, and a production contact hub. Before public launch, traffic is gated behind a Coming Soon experience controlled by environment configuration.
 
-**Live domain (production):** [https://lawgpt.ai](https://lawgpt.ai)  
+**Live domain (production):** [https://lawgptapp.com](https://lawgptapp.com)  
 **Product app:** [https://app.lawgptapp.com](https://app.lawgptapp.com)
 
 ---

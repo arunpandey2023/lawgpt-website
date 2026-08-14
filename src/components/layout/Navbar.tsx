@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { GlobalSearch } from "@/components/search/GlobalSearch";
 import { useSearch } from "@/components/search/SearchProvider";
+import { AuthNavLink } from "@/components/layout/AuthNavLink";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/layout/Logo";
@@ -108,6 +109,7 @@ export function Navbar() {
 
               <div className="hidden items-center gap-2 lg:flex">
                 <SearchTrigger />
+                <AuthNavLink />
                 <Button href="/#start" size="sm">
                   Start Free
                 </Button>
@@ -167,7 +169,11 @@ export function Navbar() {
                 >
                   Search
                 </button>
-                <div className="pt-2">
+                <div className="flex flex-col gap-2 pt-2">
+                  <AuthNavLink
+                    className="w-full"
+                    onNavigate={() => setOpen(false)}
+                  />
                   <Button
                     href="/#start"
                     className="w-full"

@@ -50,6 +50,15 @@ export function SearchProvider({ children }: { children: ReactNode }) {
           }
           return !value;
         });
+        return;
+      }
+
+      if (event.key === "Escape") {
+        setOpenState((value) => {
+          if (!value) return value;
+          event.preventDefault();
+          return false;
+        });
       }
     };
 

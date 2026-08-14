@@ -110,7 +110,7 @@ export const cookiePolicy: LegalDocument = {
       title: "Managing cookies",
       paragraphs: [
         "You can control cookies through your browser settings. Most browsers let you block or delete cookies, or alert you before a cookie is stored. If you block essential cookies, parts of LawGPT—including sign-in and secure document features—may not function.",
-        "Where we offer an in-product cookie preference control, you can use it to adjust non-essential categories. You can also clear site data from your browser for lawgpt.ai, lawgptapp.com, and related domains.",
+        "Where we offer an in-product cookie preference control, you can use it to adjust non-essential categories. You can also clear site data from your browser for lawgptapp.com, app.lawgptapp.com, and related domains.",
       ],
       lists: [
         {

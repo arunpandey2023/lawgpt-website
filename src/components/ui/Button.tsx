@@ -2,7 +2,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "outline";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "outline" | "onDark";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -34,6 +34,9 @@ const variantStyles: Record<ButtonVariant, string> = {
     "bg-transparent text-foreground hover:bg-surface-elevated focus-visible:ring-accent/30",
   outline:
     "bg-transparent text-accent ring-1 ring-accent/25 hover:bg-accent-soft hover:-translate-y-0.5 focus-visible:ring-accent/40",
+  /** For dark / highlighted surfaces (e.g. Pro pricing card). */
+  onDark:
+    "bg-transparent text-white ring-1 ring-white/40 hover:bg-white/10 focus-visible:ring-white/50",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

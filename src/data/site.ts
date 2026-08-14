@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "The AI Operating System for Legal Services",
   description:
     "Understand your legal problem, answer guided AI questions, generate lawyer-grade documents, obtain lawyer review, and download complete filing packages.",
-  url: "https://lawgpt.ai",
+  url: "https://lawgptapp.com",
   appUrl: "https://app.lawgptapp.com",
   brand: {
     /** Official square mark (includes wordmark). */

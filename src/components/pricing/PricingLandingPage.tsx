@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
+import { ProCheckoutActions } from "@/components/pricing/ProCheckoutActions";
 import { Cta } from "@/components/shared/Cta";
 import { Faq } from "@/components/shared/Faq";
 import { PricingCard } from "@/components/shared/PricingCard";
@@ -148,7 +149,23 @@ export function PricingLandingPage() {
         <div className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2">
           {pricingPlans.map((plan, i) => (
             <Reveal key={plan.id} delay={(Math.min(i + 1, 3) as 1 | 2 | 3)}>
-              <PricingCard plan={plan} />
+              <PricingCard
+                plan={plan}
+                actions={
+                  plan.id === "pro" ? (
+                    <Suspense
+                      fallback={
+                        <div className="mt-8 space-y-3">
+                          <div className="h-12 w-full animate-pulse rounded-[14px] bg-white/20" />
+                          <div className="h-12 w-full animate-pulse rounded-[14px] bg-white/10" />
+                        </div>
+                      }
+                    >
+                      <ProCheckoutActions highlighted={plan.highlighted} />
+                    </Suspense>
+                  ) : undefined
+                }
+              />
             </Reveal>
           ))}
         </div>

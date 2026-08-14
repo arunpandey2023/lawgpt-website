@@ -199,6 +199,23 @@ function SearchDialog({
             <kbd className="hidden rounded-md bg-surface-soft px-1.5 py-0.5 text-[11px] font-medium text-muted ring-1 ring-border sm:inline-block">
               Esc
             </kbd>
+            <button
+              type="button"
+              onClick={close}
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition hover:bg-surface-soft hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+              aria-label="Close search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                aria-hidden
+              >
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              </svg>
+            </button>
           </div>
 
           <div

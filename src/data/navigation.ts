@@ -6,6 +6,7 @@ export const mainNav: NavItem[] = [
   { label: "Legal Guides", href: "/academy" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export const footerNav = {
