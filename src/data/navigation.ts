@@ -48,8 +48,24 @@ export const footerNav = {
   ],
 } as const;
 
+/** Official LawGPT social profiles (footer + other public surfaces). */
 export const socialLinks = [
-  { label: "X", href: "https://x.com", icon: "x" as const },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" as const },
-  { label: "YouTube", href: "https://youtube.com", icon: "youtube" as const },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/lawgptapp/?viewAsMember=true",
+    ariaLabel: "LawGPT on LinkedIn",
+    icon: "linkedin" as const,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@LawGPTIndia",
+    ariaLabel: "LawGPT on YouTube",
+    icon: "youtube" as const,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/LawGPTapp",
+    ariaLabel: "LawGPT on Facebook",
+    icon: "facebook" as const,
+  },
 ] as const;

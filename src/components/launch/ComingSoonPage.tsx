@@ -8,6 +8,7 @@ import {
   LAUNCH_AT_LABEL,
   launchPage,
 } from "@/lib/launch/config";
+import { socialLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 
 export function ComingSoonPage() {
@@ -170,12 +171,13 @@ export function ComingSoonPage() {
       <section className="border-t border-border py-12">
         <Container>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {page.social.map((item) => (
+            {socialLinks.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={item.ariaLabel}
                 className="rounded-full bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm ring-1 ring-border transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 {item.label}

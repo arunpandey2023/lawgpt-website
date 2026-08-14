@@ -66,11 +66,4 @@ export const launchPage = {
     success:
       "You are on the list. We will notify you when LawGPT launches.",
   },
-  social: [
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "X", href: "https://x.com" },
-    { label: "YouTube", href: "https://youtube.com" },
-    { label: "Facebook", href: "https://facebook.com" },
-    { label: "Instagram", href: "https://instagram.com" },
-  ],
 } as const;

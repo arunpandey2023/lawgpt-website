@@ -44,9 +44,10 @@ function SocialIcon({ icon }: { icon: (typeof socialLinks)[number]["icon"] }) {
       </svg>
     );
   }
+  // facebook
   return (
     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-      <path d="M18.24 3H21l-6.52 7.45L22.2 21h-6.1l-4.77-6.24L5.9 21H3.12l6.98-7.98L1.9 3h6.25l4.3 5.7L18.24 3zm-1.07 16.2h1.67L7 4.7H5.2l11.97 14.5z" />
+      <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z" />
     </svg>
   );
 }
@@ -69,7 +70,7 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={link.label}
+                  aria-label={link.ariaLabel}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-muted ring-1 ring-border transition-all duration-200 hover:-translate-y-0.5 hover:text-foreground hover:shadow-sm"
                 >
                   <SocialIcon icon={link.icon} />
